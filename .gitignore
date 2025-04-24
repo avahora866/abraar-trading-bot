@@ -3,3 +3,9 @@
 ################################################################################
 
 /TradingBot/.vs/TradingBot
+*.sqlite
+/Trading/x64/Debug
+/Trading/vcpkg_installed/x64-windows
+/Trading/.vs/Trading
+/Trading/Trading/x64/Debug
+/.vs/slnx.sqlite-journal
