@@ -1,0 +1,7 @@
+add_executable(HttpClient main.cpp, AlpacaConfig.cpp)
+
+# Link with curl
+target_link_libraries(HttpClient PRIVATE CURL::libcurl)
+
+# Include directories for curl
+target_include_directories(HttpClient PRIVATE ${CURL_INCLUDE_DIRS})
