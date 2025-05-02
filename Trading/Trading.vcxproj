@@ -130,13 +130,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Text Include="CMakeList.txt" />
+    <Text Include="CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\AlpacaConfig.cpp" />
+    <ClCompile Include="src\Audit.cpp" />
+    <ClCompile Include="src\AlpacaEndpoint.cpp" />
+    <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\OrderManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="vcpkg.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\AlpacaConfig.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
