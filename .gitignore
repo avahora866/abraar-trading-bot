@@ -9,3 +9,7 @@
 /Trading/.vs/Trading
 /Trading/Trading/x64/Debug
 /.vs/slnx.sqlite-journal
+/Trading/.vs
+/Trading/build
+/Trading/vcpkg_installed/vcpkg
+/.vs
