@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+	<Appenders>
+		
+		<!-- JSON audit log -->
+		<File name="AuditFile" fileName="logs/audit.log" append="true">
+			<JsonLayout
+				complete="false"
+				compact="true"
+				eventEol="true"
+				properties="true"
+				includeTimeMillis="true" />
+		</File>
+		
+		<!-- Optional console output -->
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/>
+		</Console>
+	
+	</Appenders>
+	
+	<Loggers>
+		<!-- Main app logger -->
+		<Root level="info">
+			<AppenderRef ref="Console"/>
+			<AppenderRef ref="AuditFile"/>
+		</Root>
+		
+		<!-- Example: custom audit logger -->
+		<Logger name="AuditLogger" level="info" additivity="false">
+			<AppenderRef ref="AuditFile"/>
+		</Logger>
+	</Loggers>
+</Configuration>
