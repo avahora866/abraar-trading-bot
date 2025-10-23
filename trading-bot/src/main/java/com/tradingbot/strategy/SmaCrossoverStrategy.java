@@ -55,7 +55,6 @@ public class SmaCrossoverStrategy implements TradingStrategy {
             return 0.0;
         }
 
-        // Use mapToDouble and getC()
         return bars.stream()
                 .mapToDouble(StockBar::getC) // Use getC() which returns Double
                 .average()

@@ -42,7 +42,6 @@ public class BacktestingService {
             return new BacktestResult(symbol, strategy.getName(), 0, 0, 0, 0, 0);
         }
 
-        // Revert to using double for backtesting calculations
         double initialCapital = 10000.0;
         double capital = initialCapital;
         double shares = 0.0;
@@ -52,7 +51,6 @@ public class BacktestingService {
             List<StockBar> historicalSlice = allBars.subList(0, i);
             Signal signal = strategy.generateSignal(historicalSlice);
 
-            // Use getC() which returns Double
             double currentPrice = allBars.get(i).getC();
 
             if (signal == Signal.BUY && capital > currentPrice) {

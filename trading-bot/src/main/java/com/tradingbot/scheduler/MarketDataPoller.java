@@ -42,7 +42,7 @@ public class MarketDataPoller {
                 now.minusDays(60), 
                 now, 
                 longWindow + 1, 
-                "1Day" // <-- This is the fix
+                "1Day"
         );
         
         if (bars != null && !bars.isEmpty()) {
